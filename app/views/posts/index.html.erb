@@ -4,7 +4,7 @@
  <%@posts.each do |post|%>
   <div id = "post<%=post.id%>" class = "post-container">
     <li>
-      <div class = "vote-button"><a href = "/posts/<%=post.id%>/vote" >^</a>
+      <div class = "vote-button"><%= link_to "^", vote_path(post) %>
       </div>
       <div class = "post">
       <div class = "post-title"><a href = "<%=post.url%>"><%=post.title%></a>
@@ -20,12 +20,13 @@
 </div>
 </ol>
 
-<div id = "post-form">
-<%= form_for :post, url: "/posts" do |f|  %>
+  <div id = "post-form">
+  <%= form_for :post, url: "/posts" do |f|  %>
 
-  Title: <%= f.text_field :title %>
-  Url: <%= f.text_field :url %>
-  <%= f.submit "submit new post" %>
+    Title: <%= f.text_field :title %>
+    Url: <%= f.text_field :url %>
+    <%= f.submit "submit new post" %>
 
-<% end %>
-</div>
+  <% end %>
+  </div>
+

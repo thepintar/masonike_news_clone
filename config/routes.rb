@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post '/posts' => 'posts#create'
   get '/posts/:id' => 'posts#show', :as => :post
   get '/posts/:id/edit' => 'posts#edit'
-  get '/posts/:id/vote' => 'posts#vote'
+  get '/posts/:id/vote' => 'posts#vote', :as => :vote
   put '/posts/:id' => 'posts#update'
   delete '/posts/:id' => 'posts#destroy'
 
