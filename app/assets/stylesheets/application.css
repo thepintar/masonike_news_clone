@@ -68,7 +68,8 @@ body {
   margin: 5px;
 }
 #post-form{
-
+  width: 35%;
+  margin: 0 auto;
 }
 #header{
   margin-top: 10px;
